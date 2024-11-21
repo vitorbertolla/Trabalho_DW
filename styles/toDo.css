@@ -49,6 +49,14 @@ main input {
   text-align: center;
 }
 
+#caixaTask {
+  height: 20vh;
+  width: 40vw;
+  background: red;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 section {
   height: 25vh;
 }
