@@ -49,7 +49,7 @@ main input {
   text-align: center;
 }
 
-#caixaTask {
+.caixaTask {
   height: 20vh;
   width: 40vw;
   background: red;
