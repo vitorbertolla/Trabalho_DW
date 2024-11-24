@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+  --1color:
+  --2color:
+  --3color:
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .conteiner {
@@ -34,6 +45,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: .9375rem;
 }
 
 header i {
@@ -42,32 +54,68 @@ header i {
 
 main {
   height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .625rem;
 }
 
-main input {
-  padding: 10px 120px;
+main #taksTexto {
+  height: 5vh;
+  width: 25vw;
   text-align: center;
 }
 
-.caixaTask {
-  height: 20vh;
-  width: 40vw;
-  background: red;
+#buttonCriar {
+  height: 5vh;
+  width: 3vw;
+}
+
+.caixaTaks {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  gap: .625rem;
+  padding: 10px;
+  min-height: 5vh;
+  width: 25vw;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-wrap: wrap;
+
 }
 
 .deleteTask {
+  height: 2vh;
+  width: 1.2vw;
+}
 
+.updateTask {
+  height: 2vh;
+  width: 1.2vw;
 }
 
 .inputUpdate {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 
+.caixaUpdate {
+  display: flex;
+  align-items: center;
 }
 
 .btnConfirm {
-  
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
 }
+
 section {
   height: 25vh;
 }
