@@ -57,6 +57,17 @@ main input {
   justify-content: space-evenly;
 }
 
+.deleteTask {
+
+}
+
+.inputUpdate {
+
+}
+
+.btnConfirm {
+  
+}
 section {
   height: 25vh;
 }
