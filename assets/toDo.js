@@ -79,33 +79,57 @@ function criarTask(descricao){
     pos++
 }
 
-function desenvolvimento() {
-    const totalTask = document.querySelector(".").length
-    const feitaTaks = document.querySelector("input:cheked").length
+function desenvolvimento() { //Fazer ainda
+   // const totalTask = document.querySelector(".").length
+   // const feitaTaks = document.querySelector("input:cheked").length
 }
 
 
+const alunos = [
+    {
+        id: 1,
+        nome: "Hiago",
+        idade: 16
+    },
+    {
+        id: 2,
+        nome: "Vitor",
+        idade: 16
+    },
+    {
+        id: 3,
+        nome: "Garro",
+        idade: 16
+    }
+]
 
-// console.log(tarefas)
+const alunosTela = document.querySelector('#alunosTela')
+const tela = document.querySelector('#tela')
+const alunosLista = document.querySelector('#alunosLista')
+const fecharTela = document.querySelector('#fecharTela')
 
+function abrirTela() {
+    alunosLista.innerHTML = ''
+    alunos.map((aluno) => {
+        const caixaAluno = document.createElement('li')
+        caixaAluno.textContent = `${aluno.nome} - ${aluno.idade} anos`
+        alunosLista.appendChild(caixaAluno) 
+    })
+    alunosTela.style.display = "block"
+    tela.style.display = "block"
+}
 
+function fecharTelaComando() {
+    alunosTela.style.display = "none"
+    tela.style.display = "none"
+}
 
+fecharTela.addEventListener('click', fecharTelaComando)
+tela.addEventListener('click', fecharTelaComando)
 
-
-
-
-// const criarTask = (descricao) => {
-//     
-
-
-
-   
-
-//     
-
-//     caixaTaks.appendChild(checkbox)
-//     caixaTaks.appendChild(p)
-// }
-// let tarefas = [
-//     {idTarefa: 1, nome: "fazer trabalho", feito:false}
-// ]
+const comando = document.addEventListener('keydown', (event) => {
+    if(event.ctrlKey && event.key === 'h') {
+        event.preventDefault()
+        abrirTela()
+    }
+}) 
