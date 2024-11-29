@@ -22,6 +22,8 @@ function criarTask(descricao){
 
     let checkbox = document.createElement('input')
     checkbox.setAttribute("type", "checkbox")
+    checkbox.setAttribute("data-id", novaTarefa.id)
+    // pra vincular o checkbox com a tarefa
     checkbox.checked = false
     caixaTaks.appendChild(checkbox)
 
@@ -33,11 +35,17 @@ function criarTask(descricao){
 
 
     desenvolvimento()
-    checkbox.addEventListener("click", check1)
-    function check1 (){
-        tarefas[pos].feito = true
-        desenvolvimento()
-    }
+    checkbox.addEventListener('click', () => {
+        const tarefaId = parseInt(checkbox.getAttribute("data-id"))
+        //  esse parseint converte string em numero
+        const tarefa = tarefas.find(t => t.id === tarefaId)
+        if (tarefa) {
+            tarefa.feito = checkbox.checked
+            desenvolvimento()
+        }
+    });
+    
+
 
 
 
@@ -49,6 +57,7 @@ function criarTask(descricao){
     deleteTask.addEventListener('click', () =>{
         tarefas = tarefas.filter((tarefa) => tarefa.id !== novaTarefa.id)
         localTaks.removeChild(caixaTaks) 
+        desenvolvimento()
             })
 
 
@@ -83,6 +92,8 @@ function criarTask(descricao){
                 window.alert("O nome da tarefa não pode estar vazio!!!")
             }
             })
+            desenvolvimento()
+
 
             
         })
@@ -94,10 +105,9 @@ function criarTask(descricao){
 
 
 
-function desenvolvimento() { //Fazer ainda
+function desenvolvimento() { 
    const totalTarefa = tarefas.length
    const tarefasfeitas = tarefas.filter(t => t.feito).length
-    console.log(`${tarefasfeitas}/${totalTarefa} das tarefas feitas`)
    let progresso = document.querySelector("#prog")
    progresso.innerHTML = `${tarefasfeitas}/${totalTarefa} das tarefas feitas`
 }
