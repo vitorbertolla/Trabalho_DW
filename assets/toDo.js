@@ -38,7 +38,7 @@ function criarTask(descricao){
     checkbox.addEventListener('click', () => {
         const tarefaId = parseInt(checkbox.getAttribute("data-id"))
         //  esse parseint converte string em numero
-        const tarefa = tarefas.find(t => t.id === tarefaId)
+        const tarefa = tarefas.find(t => t.id == tarefaId)
         if (tarefa) {
             tarefa.feito = checkbox.checked
             desenvolvimento()
@@ -108,12 +108,9 @@ function criarTask(descricao){
 function desenvolvimento() { 
    const totalTarefa = tarefas.length
    const tarefasfeitas = tarefas.filter(t => t.feito).length
-   let progresso = document.querySelector("#prog")
+   const progresso = document.querySelector("#prog")
    progresso.innerHTML = `${tarefasfeitas}/${totalTarefa} das tarefas feitas`
 }
-
-
-
 
 
 const alunos = [
