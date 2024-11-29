@@ -173,3 +173,9 @@ body.dark-mode {
   background-color: #1e1e1e;
   border: 1px solid #333;
 }
+#progresso{
+  text-align: center;
+  width: 30vw;
+  border: 1px solid black;
+  padding: 15px;
+}

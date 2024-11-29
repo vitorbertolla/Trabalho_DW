@@ -30,6 +30,17 @@ function criarTask(descricao){
     caixaTaks.appendChild(p)
 
 
+
+
+    desenvolvimento()
+    checkbox.addEventListener("click", check1)
+    function check1 (){
+        tarefas[pos].feito = true
+        desenvolvimento()
+    }
+
+
+
     let deleteTask = document.createElement('img')
     deleteTask.src = "data:image/svg+xml,%3Csvg%20%20xmlns=%22http://www.w3.org/2000/svg%22%20%20width=%2224%22%20%20height=%2224%22%20%20viewBox=%220%200%2024%2024%22%20%20fill=%22none%22%20%20stroke=%22currentColor%22%20%20stroke-width=%222%22%20%20stroke-linecap=%22round%22%20%20stroke-linejoin=%22round%22%20%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-trash%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22/%3E%3Cpath%20d=%22M4%207l16%200%22%20/%3E%3Cpath%20d=%22M10%2011l0%206%22%20/%3E%3Cpath%20d=%22M14%2011l0%206%22%20/%3E%3Cpath%20d=%22M5%207l1%2012a2%202%200%200%200%202%202h8a2%202%200%200%200%202%20-2l1%20-12%22%20/%3E%3Cpath%20d=%22M9%207v-3a1%201%200%200%201%201%20-1h4a1%201%200%200%201%201%201v3%22%20/%3E%3C/svg%3E"
     deleteTask.classList.add('deleteTask')
@@ -85,6 +96,10 @@ function criarTask(descricao){
 
 function desenvolvimento() { //Fazer ainda
    const totalTarefa = tarefas.length
+   const tarefasfeitas = tarefas.filter(t => t.feito).length
+    console.log(`${tarefasfeitas}/${totalTarefa} das tarefas feitas`)
+   let progresso = document.querySelector("#prog")
+   progresso.innerHTML = `${tarefasfeitas}/${totalTarefa} das tarefas feitas`
 }
 
 
