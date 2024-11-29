@@ -23,21 +23,6 @@
   align-items: center;
 }
 
-.light-dark {
-  height: 10vh;
-  width: 100vw;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-.light-dark button {
-  border: 2px solid black;
-  background: red;
-  height: 5vh;
-  width: 3vw;
-  margin: 1rem;
-}
 
 header {
   height: 25vh;
@@ -83,7 +68,7 @@ main #taksTexto {
   border: 1px solid #ccc;
   border-radius: 5px;
   flex-wrap: wrap;
-
+  
 }
 
 .deleteTask {
@@ -157,4 +142,34 @@ section div {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
+}
+
+.light-dark {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.light-dark button {
+  border: 2px solid black;
+  height: 5vh;
+  width: 3vw;
+  margin: 1rem;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .conteiner {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
 }

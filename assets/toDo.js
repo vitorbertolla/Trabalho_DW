@@ -79,10 +79,16 @@ function criarTask(descricao){
     pos++
 }
 
+
+
+
+
 function desenvolvimento() { //Fazer ainda
-   // const totalTask = document.querySelector(".").length
-   // const feitaTaks = document.querySelector("input:cheked").length
+   const totalTarefa = tarefas.length
 }
+
+
+
 
 
 const alunos = [
@@ -133,3 +139,24 @@ const comando = document.addEventListener('keydown', (event) => {
         abrirTela()
     }
 }) 
+
+
+
+
+
+const botaoAlterarTema = document.querySelector("#alterarTema")
+
+function alterarTema() {
+document.body.classList.toggle("dark-mode")
+
+const icone = botaoAlterarTema.querySelector("i")
+if (document.body.classList.contains("dark-mode")) {
+    icone.classList.remove("fa-moon")
+    icone.classList.add("fa-sun")
+} else {
+    icone.classList.remove("fa-sun")
+    icone.classList.add("fa-moon")
+}
+}
+
+botaoAlterarTema.addEventListener("click", alterarTema)
