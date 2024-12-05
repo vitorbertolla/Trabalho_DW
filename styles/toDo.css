@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-:root {
-  --1color:
-  --2color:
-  --3color:
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   margin: 0;
@@ -30,7 +25,7 @@ header {
   justify-content: center;
 }
 
-header img{
+header img {
   height: 15vh;
 }
 
@@ -40,7 +35,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .625rem;
+  gap: 0.625rem;
 }
 
 main #taskTexto {
@@ -49,24 +44,24 @@ main #taskTexto {
   text-align: center;
 }
 
-#buttonCriar { 
+#buttonCriar {
   height: 7vh;
   width: 3vw;
   cursor: pointer;
   outline: none;
-  transition: transform 0.5s; }
-#buttonCriar:hover { 
-  transform: rotate(180deg); 
+  transition: transform 0.5s;
+}
+
+#buttonCriar:hover {
+  transform: rotate(180deg);
   background-color: #c5c5c5;
-
-} 
-
+}
 
 .caixaTask {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .625rem;
+  gap: 0.625rem;
   padding: 10px;
   min-height: 8vh;
   width: 25vw;
@@ -83,7 +78,6 @@ main #taskTexto {
 .updateTask {
   height: 4vh;
   width: 1.2vw;
-
 }
 
 .inputUpdate {
@@ -98,7 +92,7 @@ main #taskTexto {
 }
 
 .btnConfirm {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -118,7 +112,7 @@ section div {
 
 #alunosTela {
   display: none;
-  position: fixed;  
+  position: fixed;
   top: 20vh;
   left: 30vw;
   width: 40vw;
@@ -139,10 +133,12 @@ section div {
   align-items: center;
   gap: 10px;
 }
-.alunosTelaDiv li{
-  margin: 15px 0px ;
+
+.alunosTelaDiv li {
+  margin: 15px 0px;
   list-style: none;
 }
+
 #tela {
   display: none;
   position: fixed;
@@ -153,30 +149,31 @@ section div {
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
 }
-#fecharTela{
-    color: #090909;
-    padding: 7px 25px;
-    font-size: 18px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    cursor: pointer;
-    border: 1px solid #e8e8e8;
-    transition: all 0.3s;
-    box-shadow: 6px 6px 6px #c5c5c5, -6px -6px -6px #ffffff;
-    border: 1px solid rgb(45, 45, 45);
-  }
-  
-  #fecharTela:hover {
-    border: 2px solid black;
-    background: #dad2d2;
+
+#fecharTela {
+  color: #090909;
+  padding: 7px 25px;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px -6px #ffffff;
+  border: 1px solid rgb(45, 45, 45);
 }
 
-#progresso{
+#fecharTela:hover {
+  border: 2px solid black;
+  background: #dad2d2;
+}
+
+#progresso {
   text-align: center;
   width: 30vw;
   border: 1px solid black;
   padding: 15px;
-  background-color: #E8F0FE;
+  background-color: #e8f0fe;
   border-radius: 10px;
 }
 
@@ -213,9 +210,9 @@ body.dark-mode {
 .dark-mode #alunosTela {
   background-color: #121212;
   border: 1px solid white;
-  
 }
-.dark-mode #fecharTela{
+
+.dark-mode #fecharTela {
   color: white;
   background: #121212;
   border: 1px solid black;
@@ -224,19 +221,19 @@ body.dark-mode {
 .dark-mode #fecharTela:hover {
   border: 2px solid white;
 }
-.dark-mode #progresso{
-  color: black;
-  background-color: #E8F0FE;
 
+.dark-mode #progresso {
+  color: black;
+  background-color: #e8f0fe;
 }
+
 .dark-mode .caixaTask {
   border: 1px solid #3d3a3a;
   background-color: white;
   color: black;
-  
 }
-.checkboxTrue{
+
+.checkboxTrue {
   font-style: italic;
   text-decoration: line-through;
-
 }

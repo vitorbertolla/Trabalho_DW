@@ -1,3 +1,4 @@
+// Objeto para colocar as tarefas
 let tarefas = []
 
 let pos = 0 
@@ -31,7 +32,6 @@ function criarTask(descricao){
     p.textContent = descricao
     caixaTask.appendChild(p)
 
-
     inputDescricao.value = ""   
 
     desenvolvimento()
@@ -44,21 +44,15 @@ function criarTask(descricao){
         if (tarefa) {
             tarefa.feito = checkbox.checked
             desenvolvimento()
+
         if(checkbox.checked === true) {
             // p.add.classList("checkboxTrue")
             p.style.textDecoration = 'line-through' 
-            }
-        else if (checkbox.checked === false){
+        } else if (checkbox.checked === false){
             p.style.textDecoration = 'none'
         } 
-    
         }
     })
-
-    
-
-
-
 
     let deleteTask = document.createElement('img')
     deleteTask.src = "data:image/svg+xml,%3Csvg%20%20xmlns=%22http://www.w3.org/2000/svg%22%20%20width=%2224%22%20%20height=%2224%22%20%20viewBox=%220%200%2024%2024%22%20%20fill=%22none%22%20%20stroke=%22currentColor%22%20%20stroke-width=%222%22%20%20stroke-linecap=%22round%22%20%20stroke-linejoin=%22round%22%20%20class=%22icon%20icon-tabler%20icons-tabler-outline%20icon-tabler-trash%22%3E%3Cpath%20stroke=%22none%22%20d=%22M0%200h24v24H0z%22%20fill=%22none%22/%3E%3Cpath%20d=%22M4%207l16%200%22%20/%3E%3Cpath%20d=%22M10%2011l0%206%22%20/%3E%3Cpath%20d=%22M14%2011l0%206%22%20/%3E%3Cpath%20d=%22M5%207l1%2012a2%202%200%200%200%202%202h8a2%202%200%200%200%202%20-2l1%20-12%22%20/%3E%3Cpath%20d=%22M9%207v-3a1%201%200%200%201%201%20-1h4a1%201%200%200%201%201%201v3%22%20/%3E%3C/svg%3E"
@@ -69,7 +63,7 @@ function criarTask(descricao){
         tarefas = tarefas.filter((tarefa) => tarefa.id !== novaTarefa.id)
         localTaks.removeChild(caixaTask) 
         desenvolvimento()
-            })
+    })
 
 
     let updateTask = document.createElement('img')
@@ -103,20 +97,11 @@ function criarTask(descricao){
                 window.alert("O nome da tarefa não pode estar vazio!!!")
             }
             })
-            desenvolvimento()
-
-
-            
+            desenvolvimento() 
         })
-
     }
     pos++
-
 }
-
-
-
-
 
 function desenvolvimento() { 
    const totalTarefa = tarefas.length
@@ -130,15 +115,11 @@ function desenvolvimento() {
 
    if (!progress) {
     progress = document.createElement('progress')
-    
     progDiv.appendChild(progress)
-}
+    }
     progress.max = totalTarefa
     progress.value = tarefasfeitas
-
-
 }
-
 
 const alunos = [
     {
@@ -170,6 +151,7 @@ function abrirTela() {
         caixaAluno.textContent = `${aluno.nome} - ${aluno.idade} anos`
         alunosLista.appendChild(caixaAluno) 
     })
+
     alunosTela.style.display = "block"
     tela.style.display = "block"
 }
@@ -204,6 +186,7 @@ function alterarTema() {
 document.body.classList.toggle("dark-mode")
 
 const icone = botaoAlterarTema.querySelector("i")
+
 if (document.body.classList.contains("dark-mode")) {
     icone.classList.remove("fa-moon")
     icone.classList.add("fa-sun")
