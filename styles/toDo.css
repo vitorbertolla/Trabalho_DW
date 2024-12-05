@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
 :root {
   --1color:
   --2color:
@@ -23,22 +22,20 @@
   align-items: center;
 }
 
-
 header {
-  height: 25vh;
+  height: 15vh;
   width: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .9375rem;
 }
 
-header i {
-  margin: 0;
+header img{
+  height: 15vh;
 }
 
 main {
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +43,7 @@ main {
   gap: .625rem;
 }
 
-main #taksTexto {
+main #taskTexto {
   height: 5vh;
   width: 25vw;
   text-align: center;
@@ -57,7 +54,7 @@ main #taksTexto {
   width: 3vw;
 }
 
-.caixaTaks {
+.caixaTask {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,13 +69,14 @@ main #taksTexto {
 }
 
 .deleteTask {
-  height: 2vh;
+  height: 4vh;
   width: 1.2vw;
 }
 
 .updateTask {
-  height: 2vh;
+  height: 4vh;
   width: 1.2vw;
+
 }
 
 .inputUpdate {
@@ -114,16 +112,17 @@ section div {
 #alunosTela {
   display: none;
   position: fixed;  
-  top: 0;
-  left: 0;
-  margin: 90px;
-  width: 90%;
-  height: 80%;
+  top: 20vh;
+  left: 30vw;
+  width: 40vw;
+  height: 60vh;
   background: white;
   border: 1px solid #ccc;
   padding: 70px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
+  border-radius: 10px;
+  border: 3px solid black;
 }
 
 .alunosTelaDiv {
@@ -131,8 +130,12 @@ section div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
-
+.alunosTelaDiv li{
+  margin: 15px 0px ;
+  list-style: none;
+}
 #tela {
   display: none;
   position: fixed;
@@ -142,6 +145,32 @@ section div {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
+}
+#fecharTela{
+    color: #090909;
+    padding: 7px 25px;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 6px #c5c5c5, -6px -6px -6px #ffffff;
+    border: 1px solid rgb(45, 45, 45);
+  }
+  
+  #fecharTela:hover {
+    border: 2px solid black;
+    background: #dad2d2;
+}
+
+#progresso{
+  text-align: center;
+  width: 30vw;
+  border: 1px solid black;
+  padding: 15px;
+  background-color: #E8F0FE;
+  border-radius: 10px;
 }
 
 .light-dark {
@@ -173,10 +202,29 @@ body.dark-mode {
   background-color: #1e1e1e;
   border: 1px solid #333;
 }
-#progresso{
-  text-align: center;
-  width: 30vw;
+
+.dark-mode #alunosTela {
+  background-color: #121212;
+  
+}
+.dark-mode #fecharTela{
+  color: white;
+  background: #121212;
   border: 1px solid black;
-  padding: 15px;
+  /* box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff; */
+}
+
+.dark-mode #fecharTela:hover {
+  border: 2px solid white;
+}
+.dark-mode #progresso{
+  color: black;
   background-color: #E8F0FE;
+
+}
+.dark-mode .caixaTask {
+  border: 1px solid #3d3a3a;
+  background-color: white;
+  color: black;
+  
 }
