@@ -44,8 +44,17 @@ function criarTask(descricao){
         if (tarefa) {
             tarefa.feito = checkbox.checked
             desenvolvimento()
+        if(checkbox.checked === true) {
+            // p.add.classList("checkboxTrue")
+            p.style.textDecoration = 'line-through' 
+            }
+        else if (checkbox.checked === false){
+            p.style.textDecoration = 'none'
+        } 
+    
         }
-    });
+    })
+
     
 
 
@@ -99,6 +108,7 @@ function criarTask(descricao){
 
             
         })
+
     }
     pos++
 
@@ -111,8 +121,22 @@ function criarTask(descricao){
 function desenvolvimento() { 
    const totalTarefa = tarefas.length
    const tarefasfeitas = tarefas.filter(t => t.feito).length
+
    const progresso = document.querySelector("#prog")
+   const progDiv = document.querySelector('#progresso')
+   let progress = progDiv.querySelector("progress")
+
    progresso.innerHTML = `${tarefasfeitas}/${totalTarefa} das tarefas feitas`
+
+   if (!progress) {
+    progress = document.createElement('progress')
+    
+    progDiv.appendChild(progress)
+}
+    progress.max = totalTarefa
+    progress.value = tarefasfeitas
+
+
 }
 
 

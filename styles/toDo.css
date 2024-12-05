@@ -49,11 +49,18 @@ main #taskTexto {
   text-align: center;
 }
 
-.btn { cursor: pointer; outline: none; transition: transform 0.3s; }
- .btn:hover { transform: rotate(90deg); } 
- .icon { stroke: #a1a1aa;  fill: none; transition: fill 0.3s; }
-  .btn:hover .icon { fill: #1e293b; } 
-  .btn:active .icon { stroke: #e5e7eb; fill: #4b5563; }
+#buttonCriar { 
+  height: 7vh;
+  width: 3vw;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.5s; }
+#buttonCriar:hover { 
+  transform: rotate(180deg); 
+  background-color: #c5c5c5;
+
+} 
+
 
 .caixaTask {
   display: flex;
@@ -205,13 +212,13 @@ body.dark-mode {
 
 .dark-mode #alunosTela {
   background-color: #121212;
+  border: 1px solid white;
   
 }
 .dark-mode #fecharTela{
   color: white;
   background: #121212;
   border: 1px solid black;
-  /* box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff; */
 }
 
 .dark-mode #fecharTela:hover {
@@ -227,4 +234,9 @@ body.dark-mode {
   background-color: white;
   color: black;
   
+}
+.checkboxTrue{
+  font-style: italic;
+  text-decoration: line-through;
+
 }
