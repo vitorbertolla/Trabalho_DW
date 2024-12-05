@@ -44,15 +44,16 @@ main {
 }
 
 main #taskTexto {
-  height: 5vh;
+  height: 7vh;
   width: 25vw;
   text-align: center;
 }
 
-#buttonCriar {
-  height: 5vh;
-  width: 3vw;
-}
+.btn { cursor: pointer; outline: none; transition: transform 0.3s; }
+ .btn:hover { transform: rotate(90deg); } 
+ .icon { stroke: #a1a1aa;  fill: none; transition: fill 0.3s; }
+  .btn:hover .icon { fill: #1e293b; } 
+  .btn:active .icon { stroke: #e5e7eb; fill: #4b5563; }
 
 .caixaTask {
   display: flex;
@@ -60,12 +61,11 @@ main #taskTexto {
   align-items: center;
   gap: .625rem;
   padding: 10px;
-  min-height: 5vh;
+  min-height: 8vh;
   width: 25vw;
   border: 1px solid #ccc;
   border-radius: 5px;
   flex-wrap: wrap;
-  
 }
 
 .deleteTask {
