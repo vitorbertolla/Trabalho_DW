@@ -184,26 +184,12 @@ section div {
   border: 1px solid rgb(45, 45, 45);
 }
 
-#fecharTela{
-    color: #090909;
-    padding: 7px 25px;
-    font-size: 18px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    cursor: pointer;
-    border: 1px solid #e8e8e8;
-    transition: all 0.3s;
-    box-shadow: 6px 6px 6px #c5c5c5, -6px -6px -6px #ffffff;
-    border: 1px solid rgb(45, 45, 45);
-  }
   
 #fecharTela:hover {
     border: 2px solid black;
     background: #dad2d2;
 }
 
-/* #progresso{
-=======
 
 #fecharTela {
   color: #090909;
@@ -218,12 +204,11 @@ section div {
   border: 1px solid rgb(45, 45, 45);
 }
 
->>>>>>> Stashed changes
 #fecharTela:hover {
   border: 2px solid black;
   background: #dad2d2;
 }
-
+/*
 #progresso {
   text-align: center;
   width: 35vw;
@@ -243,7 +228,7 @@ section div {
 }
 .barraProgresso{
   height: 5vh;
-  width: 35vw;
+  width: 40vw;
   max-height: 10vh;;
 }
 
@@ -295,11 +280,6 @@ body.dark-mode {
 .dark-mode #progresso{
   color: white;
   /* background-color: #E8F0FE; */
-}
-
-.dark-mode #progresso {
-  color: black;
-  background-color: #e8f0fe;
 }
 
 .dark-mode .caixaTask {
