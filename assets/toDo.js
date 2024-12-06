@@ -110,32 +110,41 @@ function desenvolvimento() {
    const progresso = document.querySelector("#prog")
    const progDiv = document.querySelector('#progresso')
    let progress = progDiv.querySelector("progress")
-
+   
    progresso.innerHTML = `${tarefasfeitas}/${totalTarefa} das tarefas feitas`
-
+   
    if (!progress) {
+       progress = document.createElement('progress')
+       progress.classList.add("barraProgresso")
+    
+
     progress = document.createElement('progress')
+
     progDiv.appendChild(progress)
     }
     progress.max = totalTarefa
     progress.value = tarefasfeitas
+
 }
 
 const alunos = [
     {
         id: 1,
-        nome: "Hiago",
-        idade: 16
+        nome: "Hiago Gimenez",
+        idade: 16,
+        whats: "https://wa.me/44999378434"
     },
     {
         id: 2,
-        nome: "Vitor",
-        idade: 16
+        nome: "Vitor Bertolla",
+        idade: 16,
+        whats:"https://wa.me/44997590100" 
     },
     {
         id: 3,
-        nome: "Garro",
-        idade: 16
+        nome: "Rodrigo Garro",
+        idade: 16,
+        whats: "https://wa.me/44997590100" 
     }
 ]
 
@@ -148,7 +157,9 @@ function abrirTela() {
     alunosLista.innerHTML = ''
     alunos.map((aluno) => {
         const caixaAluno = document.createElement('li')
-        caixaAluno.textContent = `${aluno.nome} - ${aluno.idade} anos`
+        caixaAluno.innerHTML = ` ${aluno.nome} - ${aluno.idade} anos <a aria-label="Chat on WhatsApp" href="${alunos.whats}" target="_blank">
+        <img alt="Chat on WhatsApp" src="https://cdn-icons-png.flaticon.com/512/3799/3799934.png" style="height: 20px; width: 20px;" />
+        </a>`
         alunosLista.appendChild(caixaAluno) 
     })
 
