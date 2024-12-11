@@ -3,6 +3,7 @@
 :root {
   --primary-color: #c5c5c5;
   --secondary-color: #4caf50;
+  --tertiary-color: #007bff;
   --text-light: white;
   --text-dark: black;
 }
@@ -136,8 +137,20 @@ footer {
 }
 
 .checkbox {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: .125rem solid var(--tertiary-color);
+  border-radius: .3125rem;
   outline: none;
-  padding: 6.25rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkbox:checked {
+  background-color: var(--tertiary-color); 
+  border-color: var(--tertiary-color); 
+  box-shadow: 0 0 5px var(--tertiary-color);
 }
 
 /* Caixa de Atualização */
@@ -225,6 +238,8 @@ footer {
   flex-direction: column;
   align-items: center;
 }
+
+
 
 /* Light/Dark Toggle */
 .light-dark {

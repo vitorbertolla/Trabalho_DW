@@ -73,33 +73,38 @@ function criarTask(descricao){
     caixaTask.appendChild(updateTask)
 
     updateTask.addEventListener("click", () => {
-        const inputUpdate = document.createElement('input')
-        inputUpdate.classList.add("inputUpdate")
-        inputUpdate.value = novaTarefa.nome
+        const existeInputUpdate = document.querySelector('.inputUpdate')
+        if(existeInputUpdate) {
+            alert('A caixa de atualização já está aberta!!!')
+        } else {
+            const inputUpdate = document.createElement('input')
+            inputUpdate.classList.add("inputUpdate")
+            inputUpdate.value = novaTarefa.nome
 
-        const caixaUpdate = document.createElement('div')
-        caixaUpdate.classList.add("caixaUpdate")
-        caixaUpdate.appendChild(inputUpdate)
+            const caixaUpdate = document.createElement('div')
+            caixaUpdate.classList.add("caixaUpdate")
+            caixaUpdate.appendChild(inputUpdate)
 
-        const btnConfirm = document.createElement('button')
-        btnConfirm.textContent = "Salvar"
-        btnConfirm.classList.add("btnConfirm")
-        caixaUpdate.appendChild(btnConfirm)
+            const btnConfirm = document.createElement('button')
+            btnConfirm.textContent = "Salvar"
+            btnConfirm.classList.add("btnConfirm")
+            caixaUpdate.appendChild(btnConfirm)
 
-        caixaTask.appendChild(caixaUpdate)
+            caixaTask.appendChild(caixaUpdate)
 
-        btnConfirm.addEventListener("click", () => {
-            const novoNome = inputUpdate.value
-            if (novoNome) {
-                novaTarefa.nome = novoNome
-                p.textContent = novoNome
-                caixaTask.removeChild(caixaUpdate)
-            } else {
-                window.alert("O nome da tarefa não pode estar vazio!!!")
-            }
+            btnConfirm.addEventListener("click", () => {
+                const novoNome = inputUpdate.value
+                if (novoNome) {
+                    novaTarefa.nome = novoNome
+                    p.textContent = novoNome
+                    caixaTask.removeChild(caixaUpdate)
+                } else {
+                    window.alert("O nome da tarefa não pode estar vazio!!!")
+                }
             })
-            desenvolvimento() 
-        })
+                desenvolvimento() 
+        }
+    })
     }
     pos++
 }
