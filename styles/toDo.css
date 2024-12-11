@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&display=swap');
+
 :root {
-  --1color:
-  --2color:
-  --3color:
+  --primary-color: #c5c5c5;
+  --secondary-color: #4caf50;
+  --text-light: white;
+  --text-dark: black;
 }
 
 * {
@@ -14,7 +16,18 @@
   font-style: normal;
 }
 
-.conteiner {
+body {
+  background-color: var(--text-light);
+  color: var(--text-dark);
+}
+
+body.dark-mode {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+}
+
+/* Container Geral */
+.container {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -22,9 +35,10 @@
   align-items: center;
 }
 
+/* Header */
 header {
   height: 10vh;
-  width: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,30 +48,34 @@ header img {
   height: 15vh;
 }
 
+/* Main */
 main {
   margin-top: 5vh;
-  height:55vh;
+  height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
 }
-main .mainFlex{
+
+main .mainFlex {
   height: 8vh;
 }
-.lista ul{
-  max-height: 50vh;
-  overflow-y: scroll;
 
+.lista ul {
+  max-height: 50vh;
+  overflow-y: auto;
 }
+
 main #taskTexto {
   height: 7vh;
   width: 25vw;
   text-align: center;
 }
 
-footer{
+/* Footer */
+footer {
   margin-top: 5vh;
   height: 15vh;
 }
@@ -72,9 +90,10 @@ footer{
 
 #buttonCriar:hover {
   transform: rotate(180deg);
-  background-color: #c5c5c5;
+  background-color: var(--primary-color);
 }
 
+/* Caixa de Tarefas */
 .caixaTask {
   display: flex;
   justify-content: center;
@@ -83,54 +102,40 @@ footer{
   padding: 10px;
   min-height: 8vh;
   width: 25vw;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary-color);
   border-radius: 5px;
   flex-wrap: wrap;
 }
 
-.deleteTask {
-  height: 5vh;
-  width: 1.2vw;
-  min-height: 3vh;
-}
-
+.deleteTask,
 .updateTask {
   height: 5vh;
-  min-height: 3vh;
   width: 1.2vw;
+  min-height: 3vh;
 }
-
 
 .inputUpdate {
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--primary-color);
   border-radius: 3px;
 }
 
+/* Caixa de Atualização */
 .caixaUpdate {
   display: flex;
   align-items: center;
 }
 
 .btnConfirm {
-  background-color: #4caf50;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
   cursor: pointer;
 }
 
-section {
-  height: 25vh;
-}
-
-section div {
-  height: 3vh;
-  width: 12vw;
-  background: red;
-}
-
+/* Modal */
 #alunosTela {
   display: none;
   position: fixed;
@@ -138,26 +143,18 @@ section div {
   left: 30vw;
   width: 40vw;
   height: 60vh;
-  background: white;
-  border: 1px solid #ccc;
+  background: var(--text-light);
+  color: var(--text-dark);
+  border: 3px solid var(--text-dark);
   padding: 70px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   border-radius: 10px;
-  border: 3px solid black;
 }
 
-.alunosTelaDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.alunosTelaDiv li {
-  margin: 15px 0px;
-  list-style: none;
+#alunosTela.dark-mode {
+  color: var(--text-light);
+  background: var(--text-dark);
 }
 
 #tela {
@@ -171,67 +168,38 @@ section div {
   z-index: 999;
 }
 
+/* Botão Fechar Tela */
 #fecharTela {
-  color: #090909;
+  color: var(--text-dark);
   padding: 7px 25px;
   font-size: 18px;
   border-radius: 0.5em;
-  background: #e8e8e8;
+  background: var(--primary-color);
   cursor: pointer;
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--primary-color);
   transition: all 0.3s;
-  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px -6px #ffffff;
-  border: 1px solid rgb(45, 45, 45);
-}
-
-  
-#fecharTela:hover {
-    border: 2px solid black;
-    background: #dad2d2;
-}
-
-
-#fecharTela {
-  color: #090909;
-  padding: 7px 25px;
-  font-size: 18px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  cursor: pointer;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px 6px 6px #c5c5c5, -6px -6px -6px #ffffff;
-  border: 1px solid rgb(45, 45, 45);
+  box-shadow: 6px 6px 6px var(--primary-color), -6px -6px -6px var(--text-light);
 }
 
 #fecharTela:hover {
-  border: 2px solid black;
-  background: #dad2d2;
+  border: 2px solid var(--text-dark);
+  background: var(--primary-color);
 }
-/*
+
+/* Progress Bar */
 #progresso {
-  text-align: center;
-  width: 35vw;
-  border: 1px solid black;
-  padding: 15px;
-  background-color: #e8f0fe;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
-#progresso{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
 }
-.barraProgresso{
+
+.barraProgresso {
   height: 5vh;
   width: 40vw;
-  max-height: 10vh;;
+  max-height: 10vh;
 }
 
+/* Light/Dark Toggle */
 .light-dark {
   height: 10vh;
   width: 100vw;
@@ -241,54 +209,8 @@ section div {
 }
 
 .light-dark button {
-  border: 2px solid black;
+  border: 2px solid var(--text-dark);
   height: 5vh;
   width: 3vw;
   margin: 1rem;
-}
-
-body {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-.dark-mode .conteiner {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-}
-
-.dark-mode #alunosTela {
-  background-color: #121212;
-  border: 1px solid white;
-}
-
-.dark-mode #fecharTela {
-  color: white;
-  background: #121212;
-  border: 1px solid black;
-}
-
-.dark-mode #fecharTela:hover {
-  border: 2px solid white;
-}
-
-.dark-mode #progresso{
-  color: white;
-  /* background-color: #E8F0FE; */
-}
-
-.dark-mode .caixaTask {
-  border: 1px solid #3d3a3a;
-  background-color: white;
-  color: black;
-}
-
-.checkboxTrue {
-  font-style: italic;
-  text-decoration: line-through;
 }
