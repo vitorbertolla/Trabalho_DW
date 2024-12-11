@@ -38,7 +38,7 @@ body.dark-mode {
 /* Header */
 header {
   height: 10vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,6 +65,9 @@ main .mainFlex {
 
 .lista ul {
   max-height: 50vh;
+  gap: .625rem;
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
 }
 
@@ -72,6 +75,26 @@ main #taskTexto {
   height: 7vh;
   width: 25vw;
   text-align: center;
+  background: var(--text-light);
+  border: .0625rem solid var(--text-dark);
+  border-radius: 1.875rem;
+  outline: none;
+  font-size: 1.125rem;
+}
+
+#buttonCriar {
+  min-height: 7vh;
+  min-width: 3.5vw;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.5s;
+  background: var(--text-light);
+  border-radius: 100%;
+  border: .0625rem solid var(--text-dark);
+}
+
+#buttonCriar:hover {
+  background-color: var(--primary-color);
 }
 
 /* Footer */
@@ -80,44 +103,39 @@ footer {
   height: 15vh;
 }
 
-#buttonCriar {
-  height: 7vh;
-  width: 3vw;
-  cursor: pointer;
-  outline: none;
-  transition: transform 0.5s;
-}
-
-#buttonCriar:hover {
-  transform: rotate(180deg);
-  background-color: var(--primary-color);
-}
 
 /* Caixa de Tarefas */
 .caixaTask {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.625rem;
-  padding: 10px;
+  gap: .9375rem;
+  padding: .625rem;
   min-height: 8vh;
   width: 25vw;
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
+  border: .0625rem solid var(--text-dark);
+  background: var(--text-light);
+  color: var(--text-dark);
+  border-radius: .3125rem;
   flex-wrap: wrap;
+  font-size: 1.25rem;
 }
 
 .deleteTask,
 .updateTask {
-  height: 5vh;
-  width: 1.2vw;
-  min-height: 3vh;
+  width: 1.6vw;
 }
 
 .inputUpdate {
-  padding: 5px;
-  border: 1px solid var(--primary-color);
-  border-radius: 3px;
+  padding: .3125rem;
+  border: .0625rem solid var(--primary-color);
+  border-radius: .1875rem;
+  font-size: .9375rem;
+}
+
+.checkbox {
+  outline: none;
+  padding: 6.25rem;
 }
 
 /* Caixa de Atualização */
@@ -130,8 +148,8 @@ footer {
   background-color: var(--secondary-color);
   color: var(--text-light);
   border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
+  padding: .3125rem .625rem;
+  border-radius: .1875rem;
   cursor: pointer;
 }
 
@@ -145,16 +163,29 @@ footer {
   height: 60vh;
   background: var(--text-light);
   color: var(--text-dark);
-  border: 3px solid var(--text-dark);
-  padding: 70px;
+  border: .1875rem solid var(--text-dark);
+  padding: 4.375rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  border-radius: 10px;
+  border-radius: .625rem;
+  font-size: 1.1875rem;
 }
 
 #alunosTela.dark-mode {
   color: var(--text-light);
   background: var(--text-dark);
+}
+
+.alunosTelaDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5.625rem;
+}
+
+#alunosLista {
+  list-style-type: none;
 }
 
 #tela {
@@ -171,9 +202,9 @@ footer {
 /* Botão Fechar Tela */
 #fecharTela {
   color: var(--text-dark);
-  padding: 7px 25px;
-  font-size: 18px;
-  border-radius: 0.5em;
+  padding: .4375rem 1.5625rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
   background: var(--primary-color);
   cursor: pointer;
   border: 1px solid var(--primary-color);
@@ -182,7 +213,7 @@ footer {
 }
 
 #fecharTela:hover {
-  border: 2px solid var(--text-dark);
+  border: .125rem solid var(--text-dark);
   background: var(--primary-color);
 }
 
@@ -191,12 +222,6 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.barraProgresso {
-  height: 5vh;
-  width: 40vw;
-  max-height: 10vh;
 }
 
 /* Light/Dark Toggle */
@@ -209,8 +234,10 @@ footer {
 }
 
 .light-dark button {
-  border: 2px solid var(--text-dark);
+  border: .125rem solid var(--text-dark);
+  background: var(--text-light);
   height: 5vh;
   width: 3vw;
+  border-radius: 20px;
   margin: 1rem;
 }

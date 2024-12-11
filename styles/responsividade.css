@@ -1,157 +1,57 @@
-/* Estilos base e ajustes gerais */
-
-/* Media Queries */
-
-/* Estilos para telas menores que 768px (tablets e celulares) */
-@media (max-width: 768px) {
-    .conteiner {
-      padding: 10px; /* Reduz o espaçamento para telas menores */
-    }
-  
-    header {
-      height: auto; /* Ajusta a altura para conteúdo dinâmico */
-      flex-direction: column; /* Empilha os elementos verticalmente */
-    }
-  
-    header img {
-      height: 10vh; /* Reduz proporcionalmente o tamanho da imagem */
-    }
-  
-    main {
-      margin-top: 2vh; /* Espaçamento superior reduzido */
-      gap: 1rem; /* Espaçamento entre elementos no main */
-    }
-  
-    main #taskTexto {
-      width: 80%; /* Ajusta largura do campo de texto */
-      font-size: 1rem; /* Reduz tamanho da fonte para melhor adaptação */
-    }
-  
-    #buttonCriar {
-      width: 15%; /* Ajusta largura do botão */
-      height: 6vh; /* Define altura adequada para clique */
-    }
-  
-    .lista ul {
-      width: 90%; /* Alinha a lista com o restante do layout */
-    }
-  
-    .caixaTask {
-      width: 90%; /* Ajusta largura da caixa de tarefas */
-      flex-direction: column; /* Coloca conteúdo em coluna */
-      align-items: flex-start; /* Alinha o conteúdo à esquerda */
-      background-color: #f9f9f9; /* Fundo claro para destaque */
-      border: 1px solid #ddd; /* Bordas suaves */
-      border-radius: 8px; /* Arredondamento */
-      padding: 10px; /* Espaçamento interno */
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-      position: relative; /* Para organizar botões internos */
-    }
-  
-    .caixaTask p {
-      font-size: 1rem; /* Ajusta o tamanho do texto */
-      margin-bottom: 10px; /* Espaçamento inferior */
-    }
-  
-    .deleteTask, .updateTask {
-      width: 40px; /* Tamanho fixo dos botões */
-      height: 40px; /* Define altura igual à largura */
-      display: flex; /* Centraliza ícones */
-      justify-content: center;
-      align-items: center;
-      background-color: #ff6b6b; /* Cor de destaque para delete */
-      border: none;
-      border-radius: 50%; /* Botões arredondados */
-      color: #fff; /* Texto branco */
-      font-size: 1.5rem; /* Aumenta o tamanho dos ícones */
-      cursor: pointer;
-      position: absolute; /* Para posicionamento dentro da tarefa */
-    }
-  
-    .deleteTask {
-      right: 10px; /* Alinha à direita */
-      top: 10px; /* Alinha no topo */
-    }
-  
-    .updateTask {
-      right: 60px; /* Espaçamento entre botões */
-      top: 10px; /* Alinha no topo */
-      background-color: #4caf50; /* Cor para editar */
-    }
-  
-    .deleteTask:hover {
-      background-color: #ff5252; /* Cor ao passar o mouse */
-    }
-  
-    .updateTask:hover {
-      background-color: #43a047; /* Cor ao passar o mouse */
-    }
-  
-    footer {
-      margin-top: 2vh; /* Espaçamento superior no rodapé */
-    }
-  
-    .light-dark {
-      justify-content: center; /* Centraliza o botão de modo claro/escuro */
-    }
-  
-    .light-dark button {
-      height: 4vh; /* Ajusta altura do botão */
-      width: 4vh; /* Define largura igual à altura */
-    }
-  
-    #alunosTela {
-      width: 90%; /* Define largura proporcional */
-      height: auto; /* Ajusta a altura dinamicamente */
-      top: 10vh; /* Define o espaçamento superior */
-      left: 5%; /* Centraliza o conteúdo horizontalmente */
-    }
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
   }
-  
-  /* Estilos para telas menores que 480px (smartphones menores) */
-  @media (max-width: 480px) {
-    header h1 {
-      font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
-      text-align: center; /* Centraliza o texto para melhor visualização */
-    }
-  
-    main #taskTexto {
-      width: 100%; /* Ajusta largura ao máximo disponível */
-      font-size: 0.9rem; /* Reduz o tamanho da fonte */
-    }
-  
-    #buttonCriar {
-      width: 20%; /* Proporção maior para facilitar o clique */
-      height: 5vh; /* Define altura menor para dispositivos menores */
-    }
-  
-    .caixaTask {
-      flex-direction: column; /* Empilha elementos em coluna */
-      padding: 5px; /* Reduz o espaçamento interno */
-    }
-  
-    .caixaTask p {
-      font-size: 0.9rem; /* Ajusta o tamanho da fonte dentro da task */
-    }
-  
-    .deleteTask, .updateTask {
-      width: 35px; /* Ajusta a largura para melhor proporção */
-      height: 35px; /* Ajusta altura */
-      font-size: 1.2rem; /* Ajusta o tamanho dos ícones */
-    }
-  
-    #fecharTela {
-      font-size: 0.9rem; /* Reduz tamanho da fonte do botão de fechar */
-      padding: 5px 10px; /* Ajusta espaçamento interno */
-    }
-  
-    #progresso {
-      width: 100%; /* Usa toda a largura disponível */
-      padding: 10px; /* Adiciona espaçamento interno */
-    }
-  
-    .barraProgresso {
-      width: 90%; /* Ajusta largura da barra de progresso */
-    }
+
+  .container {
+    padding: 10px;
   }
-  
+
+  #localTaks {
+    flex-direction: column;
+  }
+
+  .caixaTask {
+    flex: 1 1 calc(50% - 10px); /* 2 tarefas por linha */
+    max-width: calc(50% - 10px);
+  }
+
+  .modal {
+    width: 90%; /* Ocupa quase toda a largura da tela */
+    padding: 10px;
+  }
+
+  button, input {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Estilos para telas pequenas (480px ou menos) */
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 12px;
+  }
+
+  .caixaTask {
+    flex: 1 1 100%; /* 1 tarefa por linha */
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  progress {
+    height: 16px;
+  }
+
+  button, input {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    width: 100%; /* Ocupa toda a largura */
+  }
+}
