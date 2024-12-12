@@ -32,6 +32,9 @@ Esse repositório serve para fazer a tarefa da aula de Desenvolvimento Web, esse
 ### Atualizações Futuras:
 **Implementação de um servidor na nuvem (AWS), envolvendo um banco de dados NoSQL (MongoDB), como tópicos otimização de consultas, backup das tarefas e dos alunos e a segurança**
 
+### Repositório do Projeto:
+https://github.com/vitorbertolla/Trabalho_DW
+
 ### Feito por:
 - Hiago Gimenez
 - Vitor Bertolla
