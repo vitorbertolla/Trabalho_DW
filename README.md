@@ -27,6 +27,7 @@ Esse repositório serve para fazer a tarefa da aula de Desenvolvimento Web, esse
 * **toDo.css:** Estilo na aplicação.
 * **responsividade.css:** Responsividade para outros dispositivos.
 * **toDo.js:** Lógica na aplicação.
+* **codigoComentado.js:** Comentários da código.
 
 ### Atualizações Futuras:
 **Implementação de um servidor na nuvem (AWS), envolvendo um banco de dados NoSQL (MongoDB), como tópicos otimização de consultas, backup das tarefas e dos alunos e a segurança**
