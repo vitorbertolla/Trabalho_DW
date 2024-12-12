@@ -11,12 +11,16 @@ Esse repositório serve para fazer a tarefa da aula de Desenvolvimento Web, esse
     * **MDN Web Docs**
     * **Gemini**
     * **ChatGPT**
+    * **Copilot**
 
 ### Funcionalidades:
 * Criar novas tarefas
 * Editar tarefas existentes
 * Marcar tarefas como concluídas
 * Excluir tarefas
+
+### Foto da página:
+![alt text](image.png)
 
 ### Estruturas de Arquivos:
 * **toDo.html:** Arquivo para aplicação.
