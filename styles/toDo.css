@@ -239,7 +239,27 @@ footer {
   align-items: center;
 }
 
+progress {
+  width: 40vw; 
+  height: 3vh; 
+  appearance: none; 
+  border: 3px solid var(--text-dark);
+  border-radius: .625rem; 
+}
 
+progress::-webkit-progress-bar {
+  background-color: var(--primary-color); 
+  border-radius: .625rem; 
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--tertiary-color); 
+  border-radius: .625rem; 
+}
+
+.barraProgresso {
+  animation: progress-bar-animation 2s ease-in-out; 
+}
 
 /* Light/Dark Toggle */
 .light-dark {

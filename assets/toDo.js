@@ -163,7 +163,7 @@ function abrirTela() {
     alunosLista.innerHTML = ''
     alunos.map((aluno) => {
         const caixaAluno = document.createElement('li')
-        caixaAluno.innerHTML = ` ${aluno.nome} - ${aluno.idade} anos <a aria-label="Chat on WhatsApp" href="${alunos.whats}" target="_blank">
+        caixaAluno.innerHTML = ` ${aluno.nome} - ${aluno.idade} anos <a aria-label="Chat on WhatsApp" href="${aluno.whats}" target="_blank">
         <img alt="Chat on WhatsApp" src="https://cdn-icons-png.flaticon.com/512/3799/3799934.png" style="height: 20px; width: 20px;" />
         </a>`
         alunosLista.appendChild(caixaAluno) 
