@@ -1,0 +1,99 @@
+/* Responsividade */
+@media (max-width: 920px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  header img {
+    height: 10vh;
+  }
+
+  main {
+    margin-top: 2vh;
+    gap: 1rem;
+  }
+
+  main #taskTexto {
+    width: 50vw;
+    font-size: 1rem;
+  }
+
+  #buttonCriar {
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+  .caixaTask {
+    width: 60vw;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .deleteTask,
+  .updateTask {
+    width: 20px;
+  }
+
+  #alunosTela {
+    width: 50vw;
+    height: 70vh;
+    left: 25vw;
+    top: 12.5vh;
+    font-size: 1rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+  .alunosTelaDiv {
+    gap: 4rem;
+  }
+
+  #fecharTela {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .light-dark button {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 660px) {
+  header img {
+    height: 8vh;
+  }
+
+  main #taskTexto {
+    width: 50vw;
+    font-size: 0.875rem;
+  }
+
+  .caixaTask {
+    font-size: 0.875rem;
+    gap: 0.5rem;
+    width: 85vw;
+  }
+
+  #buttonCriar {
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 25px;
+  }
+
+  #alunosTela {
+    width: 70%;
+    height: auto;
+    top: 10vh;
+    left: 15vw;
+    padding: 1.5rem;
+  }
+
+  #fecharTela {
+    font-size: 0.875rem;
+  }
+}
